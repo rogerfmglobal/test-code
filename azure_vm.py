@@ -20,7 +20,7 @@ class AzureVMCounter:
         self.subscription_id = subscription_id
         self.compute_client = ComputeManagementClient(DefaultAzureCredential(), subscription_id)
 
-    def get_vm_count(self):
+    def get_count(self):
         """
         Retrieves the total number of Azure Virtual Machines in the specified subscription.
 
@@ -34,7 +34,7 @@ class AzureVMCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_aggregated_vm_tags(self):
+    def get_aggregated_tags(self):
         """
         Aggregates and retrieves tags for all Azure VMs in the specified subscription.
 
@@ -55,7 +55,7 @@ class AzureVMCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_vm_status(self):
+    def get_status(self):
         """
         Returns the status of the Azure VM service or None if it does not apply.
         

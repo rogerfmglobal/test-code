@@ -33,7 +33,7 @@ class RDSInstanceCounter:
         """
         self.rds_client = boto3.client('rds', region_name=region_name)
 
-    def get_rds_instance_count(self):
+    def get_count(self):
         """
         Retrieves the total number of RDS instances in the specified region.
 
@@ -48,7 +48,7 @@ class RDSInstanceCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_aggregated_rds_tags(self):
+    def get_aggregated_tags(self):
         """
         Aggregates and retrieves tags for all RDS instances in the specified region.
 
@@ -78,7 +78,7 @@ class RDSInstanceCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_rds_status(self):
+    def get_status(self):
         """
         Returns the status of the RDS service or None if it does not apply.
 

@@ -20,7 +20,7 @@ class AzureNSGCounter:
         self.subscription_id = subscription_id
         self.network_client = NetworkManagementClient(DefaultAzureCredential(), subscription_id)
 
-    def get_nsg_count(self):
+    def get_count(self):
         """
         Retrieves the total number of Azure Network Security Groups in the specified subscription.
 
@@ -33,7 +33,7 @@ class AzureNSGCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_aggregated_nsg_tags(self):
+    def get_aggregated_tags(self):
         """
         Aggregates and retrieves tags for all Azure NSGs in the specified subscription.
 
@@ -54,7 +54,7 @@ class AzureNSGCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_nsg_status(self):
+    def get_status(self):
         """
         Returns the status of the Azure NSG service or None if it does not apply.
         

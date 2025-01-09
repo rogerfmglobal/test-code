@@ -33,7 +33,7 @@ class EC2SecurityGroupCounter:
         """
         self.ec2_client = boto3.client('ec2', region_name=region_name)
 
-    def get_security_group_count(self):
+    def get_count(self):
         """
         Retrieves the total number of security groups in the specified region.
 
@@ -48,7 +48,7 @@ class EC2SecurityGroupCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_aggregated_sg_tags(self):
+    def get_aggregated_tags(self):
         """
         Aggregates and retrieves tags for all EC2 security groups in the specified region.
 
@@ -75,7 +75,7 @@ class EC2SecurityGroupCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_sg_status(self):
+    def get_status(self):
         """
         Returns the status of the Security Groups service or None if it does not apply.
         

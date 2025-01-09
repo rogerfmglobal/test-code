@@ -33,7 +33,7 @@ class EC2InstanceCounter:
         """
         self.ec2_client = boto3.client('ec2', region_name=region_name)
 
-    def get_instance_count(self):
+    def get_count(self):
         """
         Retrieves the total number of EC2 instances in the specified region.
 
@@ -50,7 +50,7 @@ class EC2InstanceCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_aggregated_ec2_tags(self):
+    def get_aggregated_tags(self):
         """
         Aggregates and retrieves tags for all EC2 instances in the specified region.
 
@@ -79,7 +79,7 @@ class EC2InstanceCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_ec2_status(self):
+    def get_status(self):
         """
         Returns the status of the EC2 service or None if it does not apply.
         

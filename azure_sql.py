@@ -20,7 +20,7 @@ class AzureSQLDBCounter:
         self.subscription_id = subscription_id
         self.sql_client = SqlManagementClient(DefaultAzureCredential(), subscription_id)
 
-    def get_sql_db_count(self):
+    def get_count(self):
         """
         Retrieves the total number of Azure SQL Databases in the specified subscription.
 
@@ -34,7 +34,7 @@ class AzureSQLDBCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_aggregated_sql_db_tags(self):
+    def get_aggregated_tags(self):
         """
         Aggregates and retrieves tags for all Azure SQL Databases in the specified subscription.
 
@@ -55,7 +55,7 @@ class AzureSQLDBCounter:
             print(f"An error occurred: {e}")
             return None
 
-    def get_sql_db_status(self):
+    def get_status(self):
         """
         Returns the status of the Azure SQL Database service or None if it does not apply.
         
